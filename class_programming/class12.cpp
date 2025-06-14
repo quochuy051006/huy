@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+int min(int a, int b, int c){
+    int Min = a;
+    if(a > b) Min = b;
+    if(Min > c) Min = c;
+    return Min;
+}
+
+int main(){
+    int ugly[10000];
+    ugly[0] = 1;
+    int i2 = 0, i3 = 0, i5 = 0;
+    int next2=2, next3=3, next5=5;
+    for(int i = 1; i<1500; i++){
+        int nextUgly = min(next2, next3, next5);
+        ugly[i] = nextUgly;
+        if(nextUgly == next2){
+            i2++;
+            next2 = ugly[i2] * 2;
+        }
+        if(nextUgly == next3){
+            i3++;
+            next3 = ugly[i3] * 3;
+        }
+        if (nextUgly == next5){
+            i5++;
+            next5 = ugly[i5] * 5;
+        }
+    }
+    printf ("The 1500'th ugly number is %d", ugly[1499]);
+}

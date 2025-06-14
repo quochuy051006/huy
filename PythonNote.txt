@@ -1,0 +1,124 @@
+#1: PRINT
+- regularly, don't need ";" at the end of a line
+- if a prompt is in another prompt, tab right 1 tab, don't need {}
+- after a 'print', it will auto \n
+- we can set the ending of a code line, instead of auto going to the new line, can set by 'end="(character)"'
+- can have more than 1 object in a 'print', auto sep by a spacebar
+- we can set the sep by using 'sep= "(character)"'
+- print({0}, {1}...etc .format(0, 1, ...)) will display the in4 of 0 1 of the format
+
+#2: INPUT
+- input(prompt) : get the input 
+- input("(prompt)") will display the prompt then there will be a space for user's input
+	 e.g x = input("value of x: ")
+		it will display :
+			value of x : _(we can input here) 
+		and of course value of x is the value that we input 
+
+#3: VARIABLE
+- we can prototype variable, even more than 1 in a prompt line
+	 e.g : x, y, z = 1, 2, "hello"
+		so here, we have x = 1; y = 2; z = "hello"
+- we can also prototype many variables with the same value in a line, like x = y = z = 1
+
+#4 : CONST
+- there aren't real constants in Python, mostly constants set by coder, often wrote in upper, so it can be changed, so be careful!
+- actually, we can find a constant in the library or module
+
+#5: NAME'S VARIABLE AND CONST
+- we can use letters from A-z, digit 0-9, and '_' to name
+- should name a value that should have a mean help reader easier to understand
+- should write in upper for const, so we can recognize easily if it is const
+- the name must begin with letter or '_'
+- can't set a name that have the same name with any function in Python
+
+#6 DATA TYPE
+- don't have to prototype the data type of a variable, Python will auto 'guess' the data type
+  	e.g : x = 1 		->Python will default x is int
+- Some data types :
+	int  : integer
+	float : real number
+	complex : complex number
+	bool : TRUE or FALSE
+	str : string
+	NoneType : NULL's value
+- how to check a variable's data type: type(variable's name)
+	e.g x = 1
+	    print(type(x))
+	it will display 
+		<class 'int'>
+	so we know x is int
+- it makes us easier to code, but also makes program run slower and harder for us to debug
+
+#7 CONVERT OR FORCE DATA TYPE
+- it maybe auto forced by Python after we calculate an operation
+- we can force the data type ourselves by using fixed function in Python
+	e.g n = 100
+	    m = "200"
+	we can do any operations here, cause n is int and m is str
+	but if
+		print (str(n) + m)
+	it will display 
+		100200
+
+#8 OPERATION 
++, -, *, /, % (value)
+** : power
+// : division with int result
+>, <, ==, !=, <=, >= (True of False)
+Logic : and, or, not
+
+#9 IF...ELSE
+- how to work :
+	if (<condition(s)>) : prompt 1
+ if the condition is true, it will run the prompt 1, otherwise, it won't run
+- we can combine with "else"
+	if(<condition(s)>) : prompt 1 
+	else : prompt 2
+ here, instead of not running if the condition wrong, it will run the prompt 2 in "else"
+- we can use "elif" also, that it will check respectively each case and run the prompt in which the else if's condition is true then finish the if...else if...else 
+- if all are false, it won't run any prompt in the if...else if...else, or in some cases can run else.
+
+#10 : LIST
+- list() : create an empty list
+- create a list 
+	list = [(0), (1), (2), ...]
+- if we do :
+	print(list) 
+   or   print(list[:])
+ it will display full of the list
+- if we do
+	print(list[x])
+  it will display value the x-th position in the list
+- if we do
+	print(list[x:y])
+  it will display all the value that their position are in [x,y)
+- we can add a new element to the end of the list by
+	list.append(<value>) 
+  or    list[len(list):] = [<newList>] 	(this will add the new list to the end of the original list)
+   (len) is the "length" of the list
+- or insert into the list in pointed position by
+	list.append(<position>, <value>)
+- we can count there are how many times a value appearing in the list by
+	list.count(<value>)
+- we can delete an element by finding out their value. If there are more than 1 position with the same value, it will remove the first position's one, else if not exist that value in the list, it will be errored 
+	list.remove(<value>)
+- we can delete the pointed position also by 
+	list.pop(<position>)
+- we can reverse a list by 
+	list.reverse()
+- we can sort in the increasing order by
+	list.sort()
+ or decreasing by
+	list.sort(reverse=True)
+- we can clear the list by
+	list.clear()
+
+#11: FOR LOOP
+- how to code
+	for i in range (n)
+  # i is a variable, and it will do the prompt in the for loop with 0<=i<n, and i increases 1 after each loop
+- or we can do
+	for i in range(
+
+	
